@@ -8,6 +8,7 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -32,7 +33,7 @@
         <button href="" class="nav-btn">Resume</button>
       </nav>
     </div> -->
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -47,21 +48,21 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" class="nav-item sliding-u-l-r-l">About</a></li>
+          <li><a href="#about" class="sliding-u-l-r-l">About</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle nav-item sliding-u-l-r-l" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle sliding-u-l-r-l" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="http://kellenschmidt.com">URL Shortener</a></li>
-              <li><a href="https://play.google.com/store/apps/details?id=com.kellenschmidt.materialtipcalculator">Material Tip Calculator</a></li>
+              <li><a href="#url-shortener">URL Shortener</a></li>
+              <li><a href="#material-tip-calculator">Material Tip Calculator</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">GroceryQuest Web App</a></li>
-              <li><a href="#">Wikibooks Search Engine</a></li>
-              <li><a href="#">Engineering Design Robot</a></li>
+              <li><a href="#groceryquest">GroceryQuest Web App</a></li>
+              <li><a href="#wikibooks">Wikibooks Search Engine</a></li>
+              <li><a href="#fyd-robot">First Year Engineering Robot</a></li>
             </ul>
           </li>
-          <li><a href="https://github.com/kellenschmidt/" class="nav-item sliding-u-l-r-l">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/kellenschmidt/" class="nav-item sliding-u-l-r-l">LinkedIn</a></li>
-          <li><a href="#" class="nav-item sliding-u-l-r-l">Contact</a></li>
+          <li><a href="https://github.com/kellenschmidt/" class="sliding-u-l-r-l">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/kellenschmidt/" class="sliding-u-l-r-l">LinkedIn</a></li>
+          <li><a href="#" class="sliding-u-l-r-l">Contact</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -76,26 +77,91 @@
         <p class="title-page-name">Kellen Schmidt</p>
       </div>
     </div>
+    <div id="title-scroll-down">
+      <a href="#about" id="title-scroll-down-btn" class="text-center">
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </a>
+
+    </div>
   </section>
 
-  <section id="about">
-    <p>About me</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum neque
-      in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in urna faucibus
-      egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus, finibus ullamcorper
-      ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet malesuada lectus
-      ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. Fusce in quam auctor, blandit erat eget, blandit
-      ante. Proin eleifend vestibulum odio at tristique. Donec accumsan, mauris volutpat rhoncus finibus, tortor tortor vehicula
-      turpis, a ultrices est massa et ex. Proin congue interdum eros. Duis sit amet placerat augue. Integer lorem massa,
-      fringilla non hendrerit a, venenatis at nulla. Aenean dui eros, fermentum quis nibh ac, aliquet tempus mi. Donec tristique
-      arcu non erat lobortis lobortis. Nulla et accumsan enim. Cras imperdiet ante elit, vitae vulputate massa accumsan aliquam.
-      In quis dignissim justo, non hendrerit felis. Nulla sit amet dictum est. Vivamus in auctor mauris. Nullam justo metus,
-      tempus vel sollicitudin vitae, pharetra vel turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In
-      tincidunt ante.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <div id="profile-pic"></div>
+      <h1>About me</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+        neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in urna
+        faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus, finibus
+        ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet malesuada
+        lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. Fusce in quam auctor, blandit erat eget,
+        blandit ante. Proin eleifend vestibulum odio at tristique. Donec accumsan, mauris volutpat rhoncus finibus, tortor
+        tortor vehicula turpis, a ultrices est massa et ex. Proin congue interdum eros. Duis sit amet placerat augue. Integer
+        lorem massa, fringilla non hendrerit a, venenatis at nulla. Aenean dui eros, fermentum quis nibh ac, aliquet tempus
+        mi. Donec tristique arcu non erat lobortis lobortis. Nulla et accumsan enim. Cras imperdiet ante elit, vitae vulputate
+        massa accumsan aliquam. In quis dignissim justo, non hendrerit felis. Nulla sit amet dictum est. Vivamus in auctor
+        mauris. Nullam justo metus, tempus vel sollicitudin vitae, pharetra vel turpis. Interdum et malesuada fames ac ante
+        ipsum primis in faucibus. In tincidunt ante.</p>
+    </section>
+    <section id="projects">
+      <div>
+        <h1>Projects</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+          neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in urna
+          faucibus egestas.</p>
+      </div>
+      <div>
+        <div id="url-shortener">
+          <h2>URL Shortener</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+            neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
+            urna faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus,
+            finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
+            malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
+        </div>
+        <div id="material-tip-calculator">
+          <h2>Material Tip Calculator</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+            neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
+            urna faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus,
+            finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
+            malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
+        </div>
+        <div id="groceryquest">
+          <h2>GroceryQuest Web App</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+            neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
+            urna faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus,
+            finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
+            malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
+        </div>
+        <div id="wikibooks">
+          <h2>Wikibooks Search Engine</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+            neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
+            urna faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus,
+            finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
+            malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
+        </div>
+        <div id="fyd-robot">
+          <h2>First Year Engineering Robot</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
+            neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
+            urna faucibus egestas. In ultricies quam at nibh iaculis, in pharetra felis placerat. Integer vitae dapibus metus,
+            finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
+            malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
+        </div>
+      </div>
 
+    </section>
+  </main>
   <!--</div>-->
+  <footer>
+    <div id="contact" class="container">
+      <p id="contact-heading">Contact</p>
+      <hr/>
 
+    </div>
+  </footer>
 </body>
 
 </html>
