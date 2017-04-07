@@ -20,3 +20,15 @@ $(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $titlePage.height()-$nav.height());
   });
 });
+
+wow = new WOW({
+  boxClass:     'wow',      // default
+  animateClass: 'animated', // default
+  offset:       250,        // default is 0
+  mobile:       true,       // default
+  live:         true,       // default
+  // callback:     function(box) {
+  //   box.removeClass();
+  // }
+});
+wow.init();

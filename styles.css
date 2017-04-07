@@ -1,5 +1,11 @@
+/***  General stuff  ***/
+
 body {
     margin: 0;
+}
+
+.wow {
+    visibility: hidden;
 }
 
 /***  Navbar  ***/
@@ -157,6 +163,19 @@ button.navbar-toggle {
     float: left;
 }
 
+#about p {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 30s infinite linear;
+    -moz-animation: hue 30s infinite linear;
+    -ms-animation: hue 30s infinite linear;
+     -o-animation: hue 30s infinite linear;
+        animation: hue 30s infinite linear;
+}
+
 /***  Project page  ***/
 
 /***  Footer page  ***/
@@ -175,4 +194,28 @@ footer {
     font-size: 3.5vw;
     padding: 5vw 0 1vw 0;
     margin: 0;
+}
+
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }

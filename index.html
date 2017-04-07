@@ -3,12 +3,21 @@
 
 <head>
   <title>Kellen Schmidt</title>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400|Roboto:300|Roboto:500|Roboto Condensed:500|Open Sans:400' rel='stylesheet'
-  />
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400|Roboto:300|Roboto:500|Roboto Condensed:500|Open Sans:400'
+    rel='stylesheet' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="./node_modules/wowjs/dist/wow.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
   <script src="script.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -61,7 +70,7 @@
             </ul>
           </li>
           <li><a href="https://github.com/kellenschmidt/" class="sliding-u-l-r-l">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/kellenschmidt/" class="sliding-u-l-r-l">LinkedIn</a></li>
+          <li><a href="https://linkedin.com/in/kellens/" class="sliding-u-l-r-l">LinkedIn</a></li>
           <li><a href="#" class="sliding-u-l-r-l">Contact</a></li>
         </ul>
       </div>
@@ -72,7 +81,7 @@
 
   <section id="title-page">
     <div class="row">
-      <div id="title-text" class="col-sm-offset-1 col-sm-7">
+      <div id="title-text" class="col-sm-offset-1 col-sm-7 animate fadeInUp">
         <p class="title-page-intro">What's up? I'm</p>
         <p class="title-page-name">Kellen Schmidt</p>
       </div>
@@ -86,7 +95,7 @@
   </section>
 
   <main class="container">
-    <section id="about">
+    <section id="about" class="wow fadeInUp">
       <div id="profile-pic"></div>
       <h1>About me</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
@@ -103,14 +112,14 @@
         ipsum primis in faucibus. In tincidunt ante.</p>
     </section>
     <section id="projects">
-      <div>
+      <div class="wow fadeInUp">
         <h1>Projects</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
           neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in urna
           faucibus egestas.</p>
       </div>
       <div>
-        <div id="url-shortener">
+        <div id="url-shortener" class="wow fadeInUp">
           <h2>URL Shortener</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
@@ -118,7 +127,7 @@
             finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
             malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
         </div>
-        <div id="material-tip-calculator">
+        <div id="material-tip-calculator" class="wow fadeInUp">
           <h2>Material Tip Calculator</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
@@ -126,7 +135,7 @@
             finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
             malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
         </div>
-        <div id="groceryquest">
+        <div id="groceryquest" class="wow fadeInUp">
           <h2>GroceryQuest Web App</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
@@ -134,7 +143,7 @@
             finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
             malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
         </div>
-        <div id="wikibooks">
+        <div id="wikibooks" class="wow fadeInUp">
           <h2>Wikibooks Search Engine</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
@@ -142,7 +151,7 @@
             finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
             malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
         </div>
-        <div id="fyd-robot">
+        <div id="fyd-robot" class="wow fadeInUp">
           <h2>First Year Engineering Robot</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
