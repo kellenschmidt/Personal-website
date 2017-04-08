@@ -128,7 +128,9 @@ button.navbar-toggle {
     width: 70vw;
 }
 
+/*  Down scroll arrow  */
 #title-scroll-down {
+    animation: bouncing 1.1s infinite ease-in-out;
     text-align: center;
     position: absolute;
     left: 0;
@@ -143,7 +145,20 @@ button.navbar-toggle {
     font-size: 2.3vw;
 }
 
+/*  Bouncing annimation for down arrow  */
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 14px;}
+    100% {bottom: 0;}
+}
+
 /***  About page  ***/
+
+#test {
+    position: relative;
+    top: 0px;
+    font-size: 48px;
+}
 
 #about {
     display: inline-block;
