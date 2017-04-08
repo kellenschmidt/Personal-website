@@ -41,12 +41,12 @@ body {
     color: white;
 }
 
-/* Button to expand navbar on xs */
+/* Hamburger button to expand navbar on xs */
 button.navbar-toggle {
     border: none;
 }
 
-/* 3 bars that make up button */
+/* 3 bars that make up hamburger button */
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
 }
@@ -108,7 +108,7 @@ button.navbar-toggle {
 }
 
 #title-text {
-    margin-top: 6vw;
+    margin-top: 8vw;
 }
 
 .title-page-intro {
@@ -125,6 +125,7 @@ button.navbar-toggle {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 500;
     line-height: 8vw;
+    width: 70vw;
 }
 
 #title-scroll-down {
@@ -163,6 +164,7 @@ button.navbar-toggle {
     float: left;
 }
 
+/*  Fade rainbow of text colors  */
 #about p {
     color: #f35626;
     background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
@@ -196,9 +198,7 @@ footer {
     margin: 0;
 }
 
-/*-----------------------------------*\
-  $ANIMATIONS
-\*-----------------------------------*/
+/***  Color changing text animation  ***/
 
 @-webkit-keyframes hue {
   from {
