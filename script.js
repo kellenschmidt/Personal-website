@@ -48,37 +48,37 @@ $(document).ready(function () {
     .tiType("Kellen Schmidt");
 });
 
-// Fade out scroll up animation
-$window = $(window);
-
+// Returns the top position and opacity values to apply to an element to give it the animation
 function getTopAndOpacity(element) {
-  var scrollVar = $window.scrollTop();
-  var topAndOpacity = [0, 0];
-  // Pixels between top of element and bottom of #title-page
-  var heightFromParent = element.position().top - $('#title-page').height();
-  // Percentage of viewport size that element is positioned down from top of viewport
-  var heightFromViewportPct = element[0].getBoundingClientRect().top/$window.height();
-  // Percentage of height of viewport that element takes up
-  var elementHeightPct = element.height()/$window.height();
-  // Percentage of viewport to fade element at (.8 of distance from top of viewport to top of element)
-  var fadeLinePct = (.5 - elementHeightPct/2) * .8
+  var topAndOpacity = [];
   
+  // Percentage of viewport size that element is positioned down from top of viewport
+  var heightFromViewportPct = element[0].getBoundingClientRect().top / $window.height();
+  // Percentage of height of viewport that element takes up
+  var elementHeightPct = element.height() / $window.height();
+  // Percentage of viewport to fade element at (0.85 of distance from top of viewport to top of element)
+  var fadeLinePct = (.5 - elementHeightPct / 2) * 0.85;
+
   if (heightFromViewportPct < fadeLinePct) {
-    topAndOpacity[0] = 0;
-    topAndOpacity[1] = 0 + (heightFromViewportPct*4);
-  } else
-  if (heightFromViewportPct < 1 - fadeLinePct) {
-    topAndOpacity[0] = topAndOpacity[1];
+    // Top of page: Fade out and accelerate up
+    topAndOpacity[0] = element[0].getBoundingClientRect().top * 0.3;
+    topAndOpacity[1] = heightFromViewportPct / fadeLinePct;
+  } else if (heightFromViewportPct < 1 - fadeLinePct) {
+    // Middle of page: Move up with scroll 
+    topAndOpacity[0] = topAndOpacity[0];
     topAndOpacity[1] = 1;
+  } else {
+    // Bottom of page: Fade in and accelerate up with scroll
+    topAndOpacity[0] = element[0].getBoundingClientRect().top * 0.3;
+    topAndOpacity[1] = (1-heightFromViewportPct) / fadeLinePct;
   }
-  else {
-    topAndOpacity[0] = 0;
-    topAndOpacity[1] = 0 + (scrollVar)/200;
-  }
+
   return topAndOpacity;
 }
 
-$(window).scroll(function () {
+$window = $(window);
+
+$window.scroll(function () {
   var topAndOpacity = getTopAndOpacity($('section#test'));
   $('section#test').css({
     'top': topAndOpacity[0],
