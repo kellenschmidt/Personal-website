@@ -156,6 +156,7 @@ button.navbar-toggle {
 
 #test {
     position: relative;
+    top: 100vh;
     font-size: 48px;
 }
 
@@ -176,6 +177,51 @@ button.navbar-toggle {
     height: 20vh;
     width: 20vh;
     float: left;
+}
+
+/*  Custom scrolling animation 2  */
+@keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        top: 70vh;
+    }
+    100% {
+        opacity: 1;
+        top: 55vh;
+        /*transform: translateY(-250px);*/
+    }
+}
+
+@keyframes fadeUpOut {
+    0% {
+        opacity: 1;
+        top: 55vh;
+    }
+    100% {
+        opacity: 0;
+        top: 30vh;
+        /*transform: translateY(-250px);*/
+    }
+}
+
+.myFadeUpIn {
+    animation-name: fadeUpIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.myFadeUpOut {
+    animation-name: fadeUpOut;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 /*  Fade rainbow of text colors  */
