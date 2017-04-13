@@ -162,6 +162,8 @@ button.navbar-toggle {
 
 #about {
     display: inline-block;
+    position: relative;
+    top: 1000px;
     padding: 3vw;
 }
 
@@ -240,10 +242,17 @@ button.navbar-toggle {
 
 /***  Project page  ***/
 
+#projects {
+    position: relative;
+    top: 1000px;
+}
+
 /***  Footer page  ***/
 
 footer {
     background-color: #009688;
+    position: relative;
+    top: 1000px;
     height: 50vh;
 }
 

@@ -4,19 +4,12 @@
 <head>
   <title>Kellen Schmidt</title>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script src="./node_modules/wowjs/dist/wow.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/4.4.0/typeit.min.js"></script>
-  <script src="script.js"></script>
-
   <link href='https://fonts.googleapis.com/css?family=Roboto:400|Roboto:300|Roboto:500|Roboto Condensed:500|Open Sans:400'
     rel='stylesheet' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -98,7 +91,7 @@
     <button id="test-btn" class="btn btn-primary" onclick="test()">Toggle</button>
     <button id="test-btn2" class="btn btn-primary" onclick="test2()">Toggle</button>
 
-    <section id="test" class="myFadeUpIn">
+    <section id="test" class="">
       This is a test of the magic scrolling
     </section>
 
@@ -134,7 +127,7 @@
             finibus ullamcorper ex. Donec sed orci est. Nam laoreet urna maximus metus imperdiet tempus. Nunc velit ex, imperdiet
             malesuada lectus ac, efficitur auctor lectus. Cras auctor nisl et pulvinar placerat. </p>
         </div>
-        <div id="material-tip-calculator" class="wow fadeInUp">
+        <div id="material-tip-calculator" class="aos-init" data-aos="fade-up">
           <h2>Material Tip Calculator</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur felis vel lobortis rutrum. Nunc dictum
             neque in blandit finibus. Morbi tellus lacus, auctor ac justo in, dapibus commodo neque. Integer eget enim in
@@ -177,6 +170,14 @@
 
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="./node_modules/wowjs/dist/wow.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/4.4.0/typeit.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
