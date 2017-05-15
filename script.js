@@ -52,106 +52,61 @@
 
   /* Start of scrolling animation algos */
 
-  function test() {
-    $('#test').toggleClass("myFadeUpIn");
-  }
-
-  function test2() {
-    $('#test').toggleClass("myFadeUpOut");
-  }
-
-  /* Edit classes on scroll into view algo */
-  function isElementInViewport(elem) {
-    var $elem = $(elem);
-
-    // Get the scroll position of the page.
-    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-    var viewportTop = $(scrollElem).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    // Get the position of the element on the page.
-    var elemTop = Math.round($elem.offset().top);
-    var elemBottom = elemTop + $elem.height();
-
-    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-  }
-
-  // Check if it's time to start the animation.
-  function checkAnimation() {
-    var $elem = $('#test');
-
-    // If the animation has already been started
-    // if ($elem.hasClass('myFadeUpIn')) return;
-
-    if (isElementInViewport($elem)) {
-      // Start the animation
-      $elem.addClass('myFadeUpIn');
-    } else {
-      $elem.removeClass('myFadeUpIn');
-    }
-  }
-
-  // Capture scroll events
-  $(window).scroll(function () {
-    var scrollVar = $(window).scrollTop();
-    checkAnimation();
-  });
-
-  /* AOS animation on scroll algo */
-  AOS.init({
-    easing: 'ease-out',
-    duration: 800,
-    offset: 400,
-  });
-
   /* Bi-directional scroll animation algo */
   var previousScroll = 0;
 
-  $(window).scroll(function () {
+  $(window).scroll(function (i, obj) {
+    
+    // setTimeout(function() {
+      // Number of pixels between top of viewport and top of page
+      var currentScroll = $(window).scrollTop();
 
-    var element = $('#groceryquest');
-    // Percentage of viewport size that element is positioned down from top of viewport
-    var heightFromViewportPct = element[0].getBoundingClientRect().top / $(window).height();
-    // Percentage of height of viewport that element takes up
-    var elementHeightPct = element.height() / $(window).height();
-    // Percentage of viewport to fade element at (0.85 of distance from top of viewport to top of element)
-    var fadeLinePct = (.5 - elementHeightPct / 2) * 0.85;
+      $(".kellen-scroll-anim").each(function() { 
+        var $element = $(this);
+        // var $element = $('#test');
 
-    // Number of pixels between top of viewport and top of page
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll > previousScroll) {
-      // Scrolling down, scrollTop() increases
-      if (heightFromViewportPct < .4) {
-        // Element at top of screen
-        $("#groceryquest").removeClass('myFadeDownIn myFadeDownOut myFadeUpIn');
-        if (!$("#groceryquest").hasClass('myFadeUpOut')) {
-          $("#groceryquest").addClass('myFadeUpOut');
+        // Percentage of viewport size that element is positioned down from top of viewport
+        var heightFromViewportPct = $element[0].getBoundingClientRect().top / $(window).height();
+        
+        if (currentScroll > previousScroll) {
+          // Scrolling down, scrollTop() increases
+          if (heightFromViewportPct < .4) {
+            // Element at top of screen
+            $element.removeClass('myFadeDownIn myFadeDownOut myFadeUpIn');
+            if (!$element.hasClass('myFadeUpOut')) {
+              $element.addClass('myFadeUpOut');
+            }
+          }
+          else if (heightFromViewportPct > .6) {
+            // Element at bottom of screen
+            $element.removeClass('myFadeDownIn myFadeUpOut myFadeDownOut');
+            if (!$element.hasClass('myFadeUpIn')) {
+              $element.addClass('myFadeUpIn');
+            }
+          }
+        } else {
+          // Scrolling up, scrollTop() decreases
+          if (heightFromViewportPct < .4) {
+            // Element at top of screen
+            $element.removeClass('myFadeDownOut myFadeUpOut myFadeUpIn');
+            if (!$element.hasClass('myFadeDownIn')) {
+              $element.addClass('myFadeDownIn');
+              // if($element.is('#about')) {
+              //   console.log('current: ' + currentScroll + '  previous: ' + previousScroll);
+              // }
+            }
+          }
+          else if (heightFromViewportPct > .6) {
+            // Element at bottom of screen
+            $element.removeClass('myFadeDownIn myFadeUpOut myFadeUpIn');
+            if (!$element.hasClass('myFadeDownOut')) {
+              $element.addClass('myFadeDownOut');
+            }
+          }
         }
-      }
-      else if (heightFromViewportPct > .6) {
-        // Element at bottom of screen
-        $("#groceryquest").removeClass('myFadeDownIn myFadeUpOut myFadeDownOut');
-        if (!$("#groceryquest").hasClass('myFadeUpIn')) {
-          $("#groceryquest").addClass('myFadeUpIn');
-        }
-      }
-    } else {
-      // Scrolling up, scrollTop() decreases
-      if (heightFromViewportPct < .4) {
-        // Element at top of screen
-        $("#groceryquest").removeClass('myFadeDownOut myFadeUpOut myFadeUpIn');
-        if (!$("#groceryquest").hasClass('myFadeDownIn')) {
-          $("#groceryquest").addClass('myFadeDownIn');
-        }
-      }
-      else if (heightFromViewportPct > .6) {
-        // Element at bottom of screen
-        $("#groceryquest").removeClass('myFadeDownIn myFadeUpOut myFadeUpIn');
-        if (!$("#groceryquest").hasClass('myFadeDownOut')) {
-          $("#groceryquest").addClass('myFadeDownOut');
-        }
-      }
-    }
+      });
+    // }, 1000/20);
+    
     previousScroll = currentScroll;
   });
 

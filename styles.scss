@@ -8,6 +8,11 @@ body {
     visibility: hidden;
 }
 
+.kellen-scroll-anim {
+    position: relative;
+    top: 25vh;
+}
+
 /***  Navbar  ***/
 
 /* Main navbar */
@@ -155,15 +160,15 @@ button.navbar-toggle {
 /***  About page  ***/
 
 #test {
-    position: relative;
-    top: 100vh;
+    /*position: relative;
+    top: 90vh;*/
     font-size: 48px;
 }
 
 #about {
     display: inline-block;
-    position: relative;
-    top: 1000px;
+    /*position: relative;
+    top: 90vh;*/
     padding: 3vw;
 }
 
@@ -185,53 +190,49 @@ button.navbar-toggle {
 @keyframes fadeUpIn {
     0% {
         opacity: 0;
-        top: 90vh;
+        top: 40vh;
     }
     100% {
         opacity: 1;
-        top: 75vh;
-        // transform: translateY(-250px);
+        top: 25vh;
     }
 }
 
 @keyframes fadeUpOut {
     0% {
         opacity: 1;
-        top: 75vh;
+        top: 25vh;
     }
     100% {
         opacity: 0;
-        top: 60vh;
-        // transform: translateY(-250px);
+        top: 10vh;
     }
 }
 
 @keyframes fadeDownIn {
     0% {
         opacity: 0;
-        top: 60vh;
+        top: 10vh;
     }
     100% {
         opacity: 1;
-        top: 75vh;
-        // transform: translateY(250px);
+        top: 25vh;
     }
 }
 
 @keyframes fadeDownOut {
     0% {
         opacity: 1;
-        top: 75vh;
+        top: 25vh;
     }
     100% {
         opacity: 0;
-        top: 90vh;
-        // transform: translateY(250px);
+        top: 40vh;
     }
 }
 
 @mixin scroll-anim-partial() {
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -278,7 +279,7 @@ button.navbar-toggle {
 
 /***  Project page  ***/
 
-#projects {
+/*#projects {
     position: relative;
     top: 1000px;
 }
@@ -296,18 +297,21 @@ button.navbar-toggle {
 #groceryquest {
     display: inline-block;
     position: relative;
-    top: 1000px;
+    // top: 1000px;
+    top: 90vh;    
 }
 
 #wikibooks {
+    display: inline-block;
     position: relative;
-    top: 1000px;
+    // top: 1000px;
+    top: 90vh;
 }
 
 #fyd-robot {
     position: relative;
     top: 1000px;
-}
+}*/
 
 /***  Footer page  ***/
 
