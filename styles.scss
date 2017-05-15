@@ -185,45 +185,81 @@ button.navbar-toggle {
 @keyframes fadeUpIn {
     0% {
         opacity: 0;
-        top: 70vh;
+        top: 90vh;
     }
     100% {
         opacity: 1;
-        top: 55vh;
-        /*transform: translateY(-250px);*/
+        top: 75vh;
+        // transform: translateY(-250px);
     }
 }
 
 @keyframes fadeUpOut {
     0% {
         opacity: 1;
-        top: 55vh;
+        top: 75vh;
     }
     100% {
         opacity: 0;
-        top: 30vh;
-        /*transform: translateY(-250px);*/
+        top: 60vh;
+        // transform: translateY(-250px);
     }
 }
 
-.myFadeUpIn {
-    animation-name: fadeUpIn;
+@keyframes fadeDownIn {
+    0% {
+        opacity: 0;
+        top: 60vh;
+    }
+    100% {
+        opacity: 1;
+        top: 75vh;
+        // transform: translateY(250px);
+    }
+}
+
+@keyframes fadeDownOut {
+    0% {
+        opacity: 1;
+        top: 75vh;
+    }
+    100% {
+        opacity: 0;
+        top: 90vh;
+        // transform: translateY(250px);
+    }
+}
+
+@mixin scroll-anim-partial() {
     animation-duration: 1s;
-    animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
+.myFadeUpIn {
+    @include scroll-anim-partial();
+    animation-name: fadeUpIn;
+    animation-timing-function: ease-out;
+}
+
 .myFadeUpOut {
+    @include scroll-anim-partial();
     animation-name: fadeUpOut;
-    animation-duration: 1s;
     animation-timing-function: ease-in;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
+}
+
+.myFadeDownIn {
+    @include scroll-anim-partial();
+    animation-name: fadeDownIn;
+    animation-timing-function: ease-out;
+}
+
+.myFadeDownOut {
+    @include scroll-anim-partial();
+    animation-name: fadeDownOut;
+    animation-timing-function: ease-in;
 }
 
 /*  Fade rainbow of text colors  */
@@ -247,12 +283,38 @@ button.navbar-toggle {
     top: 1000px;
 }
 
+#url-shortener {
+    position: relative;
+    top: 1000px;
+}
+
+#material-tip-calculator {
+    position: relative;
+    top: 1000px;
+}
+
+#groceryquest {
+    display: inline-block;
+    position: relative;
+    top: 1000px;
+}
+
+#wikibooks {
+    position: relative;
+    top: 1000px;
+}
+
+#fyd-robot {
+    position: relative;
+    top: 1000px;
+}
+
 /***  Footer page  ***/
 
 footer {
     background-color: #009688;
     position: relative;
-    top: 1000px;
+    top: 2000px;
     height: 50vh;
 }
 
