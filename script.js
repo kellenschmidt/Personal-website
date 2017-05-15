@@ -50,9 +50,7 @@
       .tiType("Kellen Schmidt");
   });
 
-  /* Start of scrolling animation algos */
-
-  /* Bi-directional scroll animation algo */
+  /* Start of Kellen's scrolling animation algo */
   var previousScroll = 0;
 
   $(window).scroll(function (i, obj) {
@@ -63,7 +61,6 @@
 
       $(".kellen-scroll-anim").each(function() { 
         var $element = $(this);
-        // var $element = $('#test');
 
         // Percentage of viewport size that element is positioned down from top of viewport
         var heightFromViewportPct = $element[0].getBoundingClientRect().top / $(window).height();
@@ -77,7 +74,7 @@
               $element.addClass('myFadeUpOut');
             }
           }
-          else if (heightFromViewportPct > .6) {
+          else if (heightFromViewportPct < .9) {
             // Element at bottom of screen
             $element.removeClass('myFadeDownIn myFadeUpOut myFadeDownOut');
             if (!$element.hasClass('myFadeUpIn')) {
@@ -86,21 +83,18 @@
           }
         } else {
           // Scrolling up, scrollTop() decreases
-          if (heightFromViewportPct < .4) {
-            // Element at top of screen
-            $element.removeClass('myFadeDownOut myFadeUpOut myFadeUpIn');
-            if (!$element.hasClass('myFadeDownIn')) {
-              $element.addClass('myFadeDownIn');
-              // if($element.is('#about')) {
-              //   console.log('current: ' + currentScroll + '  previous: ' + previousScroll);
-              // }
-            }
-          }
-          else if (heightFromViewportPct > .6) {
+          if (heightFromViewportPct > .6) {
             // Element at bottom of screen
             $element.removeClass('myFadeDownIn myFadeUpOut myFadeUpIn');
             if (!$element.hasClass('myFadeDownOut')) {
               $element.addClass('myFadeDownOut');
+            }
+          }
+          else if (heightFromViewportPct > .1) {
+            // Element at top of screen
+            $element.removeClass('myFadeDownOut myFadeUpOut myFadeUpIn');
+            if (!$element.hasClass('myFadeDownIn')) {
+              $element.addClass('myFadeDownIn');
             }
           }
         }

@@ -4,13 +4,10 @@ body {
     margin: 0;
 }
 
-.wow {
-    visibility: hidden;
-}
-
 .kellen-scroll-anim {
     position: relative;
     top: 25vh;
+    opacity: 0;
 }
 
 /***  Navbar  ***/
@@ -159,16 +156,7 @@ button.navbar-toggle {
 
 /***  About page  ***/
 
-#test {
-    /*position: relative;
-    top: 90vh;*/
-    font-size: 48px;
-}
-
 #about {
-    display: inline-block;
-    /*position: relative;
-    top: 90vh;*/
     padding: 3vw;
 }
 
@@ -279,46 +267,13 @@ button.navbar-toggle {
 
 /***  Project page  ***/
 
-/*#projects {
-    position: relative;
-    top: 1000px;
-}
-
-#url-shortener {
-    position: relative;
-    top: 1000px;
-}
-
-#material-tip-calculator {
-    position: relative;
-    top: 1000px;
-}
-
-#groceryquest {
-    display: inline-block;
-    position: relative;
-    // top: 1000px;
-    top: 90vh;    
-}
-
-#wikibooks {
-    display: inline-block;
-    position: relative;
-    // top: 1000px;
-    top: 90vh;
-}
-
-#fyd-robot {
-    position: relative;
-    top: 1000px;
-}*/
 
 /***  Footer page  ***/
 
 footer {
     background-color: #009688;
     position: relative;
-    top: 2000px;
+    top: 53vh;
     height: 50vh;
 }
 
