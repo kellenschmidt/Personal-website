@@ -25,16 +25,6 @@
     });
   });
 
-  // WOW fadeInUp on scroll animation
-  wow = new WOW({
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 250,
-    mobile: true,
-    live: true,
-  });
-  wow.init();
-
   // Typewriter animation
   $(document).ready(function () {
     $(".title-page-name").typeIt({
@@ -61,20 +51,25 @@
 
       $(".kellen-scroll-anim").each(function() { 
         var $element = $(this);
+        // var $element = $('#geodeals');
 
         // Percentage of viewport size that element is positioned down from top of viewport
-        var heightFromViewportPct = $element[0].getBoundingClientRect().top / $(window).height();
+        var object = $element[0].getBoundingClientRect();
+        var heightFromViewportTop = object.top / $(window).height();
+        var heightFromViewportBottom = ($(window).height()-object.bottom) / $(window).height();
+
+        console.log("hfvpBot: " + heightFromViewportBottom + ", hfvpTop: " + heightFromViewportTop);
         
         if (currentScroll > previousScroll) {
           // Scrolling down, scrollTop() increases
-          if (heightFromViewportPct < .4) {
+          if (heightFromViewportTop < .3) {
             // Element at top of screen
             $element.removeClass('myFadeDownIn myFadeDownOut myFadeUpIn');
             if (!$element.hasClass('myFadeUpOut')) {
               $element.addClass('myFadeUpOut');
             }
           }
-          else if (heightFromViewportPct < .9) {
+          else if (heightFromViewportBottom < .3 && heightFromViewportBottom > 0) {
             // Element at bottom of screen
             $element.removeClass('myFadeDownIn myFadeUpOut myFadeDownOut');
             if (!$element.hasClass('myFadeUpIn')) {
@@ -83,14 +78,14 @@
           }
         } else {
           // Scrolling up, scrollTop() decreases
-          if (heightFromViewportPct > .6) {
+          if (heightFromViewportBottom < .3) {
             // Element at bottom of screen
             $element.removeClass('myFadeDownIn myFadeUpOut myFadeUpIn');
             if (!$element.hasClass('myFadeDownOut')) {
               $element.addClass('myFadeDownOut');
             }
           }
-          else if (heightFromViewportPct > .1) {
+          else if (heightFromViewportTop > .1) {
             // Element at top of screen
             $element.removeClass('myFadeDownOut myFadeUpOut myFadeUpIn');
             if (!$element.hasClass('myFadeDownIn')) {
